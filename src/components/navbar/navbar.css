@@ -1,0 +1,24 @@
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    background-color: var(--color-navbar);
+    color: white;
+    padding: 15px 30px;
+}
+
+.navbar__links {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar__links a {
+    font-family: var(--font-family);
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+}

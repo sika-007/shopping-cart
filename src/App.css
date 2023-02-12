@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+.section__padding {
+    padding: 2rem 4rem;
+}
+
+.section__margin {
+    margin: 2rem 4rem;
+}
+
+@media screen and (max-width: 650px) {
+    .section__padding {
+        padding: 2rem 2rem;
+    }
+
+    .section__margin {
+        margin: 2rem 2rem;
+    }
+}
