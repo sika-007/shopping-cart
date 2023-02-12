@@ -1,5 +1,8 @@
 import React from 'react'
 import "./product.css"
+import RegStar from "../../assets/star-regular.svg"
+import SolidStar from "../../assets/star-solid.svg"
+
 
 const Product = (props) => {
   return (
@@ -11,6 +14,10 @@ const Product = (props) => {
         <p>{props.name}</p>
         <p>${props.price}</p>
       </div>
+      <button className="product__add-to-cart">
+        Add to Cart
+      </button>
+      
     </div>
   )
 }
