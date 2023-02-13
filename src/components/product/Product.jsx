@@ -5,6 +5,23 @@ import SolidStar from "../../assets/star-solid.svg"
 
 
 const Product = (props) => {
+
+  function StarElements() {
+    let starArr = []
+    for (let i = 0; i < 5; i++) {
+      if (i < props.rating) {
+        starArr.push(
+          <img src={SolidStar} alt="filled star" width="14px" />
+        )
+      } else {
+        starArr.push(
+          <img src={RegStar} alt="empty star" width="10px" />
+        )
+      }
+    }
+    return starArr
+  }
+
   return (
     <div className="product">
       <div className="product__image">
@@ -17,7 +34,10 @@ const Product = (props) => {
       <button className="product__add-to-cart">
         Add to Cart
       </button>
-      
+      <div className='rating'>
+        <StarElements />
+        <p>({props.rateCount})</p>
+      </div>
     </div>
   )
 }

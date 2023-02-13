@@ -8,6 +8,9 @@
     gap: 20px;
     width: 350px;
     height: 350px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 0.5rem;
 }
 
 .product:hover {
@@ -23,8 +26,8 @@
 }
 
 .product__image img {
-    height: 100%;
-    width: 100%;
+    width: 85%;
+    height: 85%;
 }
 
 .product__description {
@@ -44,14 +47,22 @@
     color: white;
     padding: 0.5rem;
     border-radius: 0.5rem;
-    top: 0px;
-    right: 0px;
+    top: 10px;
+    right: 10px;
 }
 
 .product__add-to-cart:hover {
     transform: scale(1.05);
     cursor: pointer;
+    transition: 0.2s;
 }
+
+.rating {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
 
 @media screen and (max-width: 1260px) {
     .product {
