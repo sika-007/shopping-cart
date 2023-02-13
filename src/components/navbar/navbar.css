@@ -1,11 +1,15 @@
 .navbar {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     background-color: var(--color-navbar);
     color: white;
     padding: 15px 30px;
+}
+
+.navbar__title {
+    font-family: var(--font-family);
 }
 
 .navbar__links {
