@@ -1,4 +1,26 @@
 .shop__products {
     display: grid;
-    grid-auto-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    justify-items: center;
+}
+
+@media screen and (max-width: 1050px) {
+    .shop__products {
+        gap: 40px;
+    }
+}
+
+
+@media screen and (max-width: 860px) {
+    .shop__products {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .shop__products {
+        gap: 20px;
+    }
 }

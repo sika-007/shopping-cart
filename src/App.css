@@ -5,6 +5,10 @@
     scroll-behavior: smooth;
 }
 
+#root {
+    background-color: #ebedf0;
+}
+
 .section__padding {
     padding: 2rem 4rem;
 }
@@ -22,3 +26,4 @@
         margin: 2rem 2rem;
     }
 }
+

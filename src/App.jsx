@@ -4,30 +4,34 @@ import Navbar from "./components/navbar/Navbar"
 import Shop from "./pages/shop/Shop"
 import Cart from "./pages/cart/Cart"
 import "./App.css"
+import axios from "axios"
+import { ShopContextProvider } from "./context/context"
 
-const App = () => {
 
+export const App = () => {
+  
   const [productData, setProductData] = useState([])
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products?limit=10")
-      .then((res) => res.json())
-      .then((data) => setProductData(data));
+    axios.get("https://fakestoreapi.com/products?limit=10")
+    .then(res => {
+        setProductData(res.data)
+    }).catch(err => {
+        console.log(err)
+    })
   }, [])
-
-  console.log(productData)
 
   return (
     <div className="app">
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Shop productData={productData}/>}/>
-          <Route path="/cart" element={<Cart />}/>
-        </Routes>
-      </Router>
+      <ShopContextProvider>
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Shop productData={productData}/>}/>
+            <Route path="/cart" element={<Cart />}/>
+          </Routes>
+        </Router>
+      </ShopContextProvider>
     </div>
   )
 }
-
-export default App
