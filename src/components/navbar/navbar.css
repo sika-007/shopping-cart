@@ -21,6 +21,20 @@
     gap: 20px;
 }
 
+
+.selectedBG, .noBG {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+    height: 50px;
+}
+
+.selectedBG {
+    background-color: rgb(44, 44, 44);
+    border-radius: 15px;
+}
+
 .navbar__links a {
     font-family: var(--font-family);
     text-decoration: none;
