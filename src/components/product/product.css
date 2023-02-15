@@ -6,8 +6,8 @@
     align-items: center;
     text-align: center;
     gap: 20px;
-    width: 350px;
-    height: 350px;
+    width: 370px;
+    height: 400px;
     background-color: white;
     padding: 10px;
     border-radius: 0.5rem;
@@ -42,19 +42,22 @@
 
 .product__add-to-cart {
     position: absolute;
-    background: var(--color-navbar);
+    background: transparent;
+    color: black;
     font-family: var(--font-family);
-    color: white;
     padding: 0.5rem;
+    border: 2px solid black;
     border-radius: 0.5rem;
-    top: 10px;
-    right: 10px;
+    top: 5px;
+    right: 5px;
 }
 
 .product__add-to-cart:hover {
     transform: scale(1.05);
     cursor: pointer;
     transition: 0.2s;
+    background: var(--color-navbar);
+    color: white;
 }
 
 .rating {

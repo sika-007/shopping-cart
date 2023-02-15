@@ -1,5 +1,4 @@
 import React, { createContext, useEffect, useState } from 'react'
-import { generatePath } from 'react-router-dom';
 import products  from '../productData';
 
  export const ShopContext = createContext();
@@ -7,21 +6,15 @@ import products  from '../productData';
 
 export const ShopContextProvider = (props) => {
 
-    const getDefaultCart = () => {
-        let cart = {}
-        for (let i = 0; i < products.length; i++) {
-            cart[i] = 0
-        }
-        return cart
-    }
-
     const [cartItems, setCartItems] = useState({})
 
     useEffect(() => {
-        setCartItems(getDefaultCart())
-    }, [])
-
-    console.log(cartItems)
+        let cart = {}
+        for (let i = 1; i <= products.length; i++) {
+            cart[i] = 0
+        }
+        setCartItems(cart)
+    }, [products.length])
 
     const addToCart = (itemId) => {
         setCartItems((prev) => ({...prev, [itemId]: prev[itemId] + 1}))

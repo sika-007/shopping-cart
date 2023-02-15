@@ -1,10 +1,11 @@
 import React from 'react'
 import Product from '../../components/product/Product'
 import "./shop.css"
+import products from '../../productData'
 
-const Shop = ({productData}) => {
+const Shop = () => {
 
-   const productElements = productData.map(data => {
+   const productElements = products.map(data => {
     return <Product
       key={data.id}
       data={data}

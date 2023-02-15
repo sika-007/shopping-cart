@@ -1,11 +1,13 @@
 .navbar {
     display: flex;
+    position: fixed;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     background-color: var(--color-navbar);
     color: white;
     padding: 15px 30px;
+    z-index: 1;
 }
 
 .navbar__title {

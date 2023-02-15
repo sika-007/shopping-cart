@@ -8,7 +8,9 @@ import { ShopContext } from '../../context/context'
 
 const Product = (props) => {
 
-  const {addToCart} = useContext(ShopContext)
+  const {addToCart, cartItems} = useContext(ShopContext)
+  const cartItemAmount = cartItems[props.id]
+
 
   function StarElements() {
     let starArr = []
@@ -37,7 +39,7 @@ const Product = (props) => {
         <p>${props.price}</p>
       </div>
       <button className="product__add-to-cart" onClick={() => addToCart(props.id)}>
-        Add to Cart
+        Add to Cart {cartItemAmount > 0 && `(${cartItemAmount})`}
       </button>
       <div className='rating'>
         <StarElements/>
