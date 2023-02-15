@@ -4,7 +4,7 @@ import { ShoppingCart } from 'phosphor-react'
 import "./navbar.css"
 
 const Navbar = () => {
-  const [selectedPage, setSelectedPage] = useState("shop")
+  const [selectedPage, setSelectedPage] = useState("")
 
   function cartPageSelect() {
     setSelectedPage("cart")
