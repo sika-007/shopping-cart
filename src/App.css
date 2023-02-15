@@ -10,20 +10,20 @@
 }
 
 .section__padding {
-    padding: 2rem 4rem;
+    padding: 6rem 4rem;
 }
 
 .section__margin {
-    margin: 2rem 4rem;
+    margin: 6rem 4rem;
 }
 
 @media screen and (max-width: 650px) {
     .section__padding {
-        padding: 2rem 2rem;
+        padding: 6rem 2rem;
     }
 
     .section__margin {
-        margin: 2rem 2rem;
+        margin: 6rem 2rem;
     }
 }
 
