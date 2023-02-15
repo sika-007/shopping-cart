@@ -19,12 +19,12 @@ const Cart = () => {
         price={product.price}
         description={product.description}
         rating={product.rating.rate}
-        rateCount={product.rating.rateCount}
+        rateCount={product.rating.count}
       />
-    }
+    } 
   })
 
-  console.log(products)
+console.log(Object.values(cartItems))
 
   return (
     <div className="cart section__padding">
@@ -32,7 +32,7 @@ const Cart = () => {
         <h1>Your Cart Items</h1>
       </div>
       <div className="cart__items">
-        {cartElements}
+        {Object.values(cartItems).every(num => num === 0) ? <h3 className='no-cart-items'>&#128161;Why not Add Some Items to Your Cart?&#128522;</h3> : cartElements} 
       </div>
     </div>
   )
