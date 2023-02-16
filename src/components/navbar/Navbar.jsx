@@ -21,7 +21,7 @@ const Navbar = () => {
       </div>
       <div className="navbar__links">
         <Link to="/">
-         <div onClick={shopPageSelect} className={selectedPage === "shop" ? "selectedBG" : "noBG"}>
+          <div onClick={shopPageSelect} className={selectedPage === "shop" ? "selectedBG" : "noBG"}>
             Shop
           </div>
         </Link>
