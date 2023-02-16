@@ -32,11 +32,11 @@ const Product = (props) => {
   return (
     <div className="product">
       <div className="product__image">
-        <img src={props.productImage} alt={props.name} />
+        <img src={props.productImage} alt={props.name}/>
       </div>
       <div className="product__description">
-        <p>{props.name}</p>
-        <p>${props.price}</p>
+        <p className='product__name'>{props.name}</p>
+        <p className="product__price">${props.price}</p>
       </div>
       <button className="product__add-to-cart" onClick={() => addToCart(props.id)}>
         Add to Cart {cartItemAmount > 0 && `(${cartItemAmount})`}
