@@ -42,3 +42,15 @@
     font-size: 17px;
     cursor: pointer;
 }
+
+@media screen and (max-width: 550px) {
+    .navbar__title {
+        font-size: 15px;
+        letter-spacing: -0.1rem;
+    }
+
+    .navbar__links {
+        margin-right: 0px;
+        gap: 5px;
+    }
+}
