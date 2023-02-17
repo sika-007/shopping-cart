@@ -1,8 +1,8 @@
 import React, { createContext, useEffect, useState } from 'react'
-import products  from '../productData';
+import products from '../productData';
 
- export const ShopContext = createContext();
-    
+export const ShopContext = createContext();
+
 
 export const ShopContextProvider = (props) => {
 
@@ -17,14 +17,14 @@ export const ShopContextProvider = (props) => {
     }, [products.length])
 
     const addToCart = (itemId) => {
-        setCartItems((prev) => ({...prev, [itemId]: prev[itemId] + 1}))
+        setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }))
     }
 
     const removeFromCart = (itemId) => {
-        setCartItems((prev) => ({...prev, [itemId]: prev[itemId] - 1}))
+        setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }))
     }
 
-    const contextValue = {cartItems, addToCart, removeFromCart}
+    const contextValue = { cartItems, addToCart, removeFromCart }
 
     return (
         <ShopContext.Provider value={contextValue}>

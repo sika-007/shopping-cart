@@ -2,12 +2,12 @@ import React, { useContext } from 'react'
 import "./cartItem.css"
 import SolidStar from "../../assets/star-solid.svg"
 import RegStar from "../../assets/star-regular.svg"
-import {nanoid} from "nanoid"
+import { nanoid } from "nanoid"
 import { ShopContext } from '../../context/context'
 
 const CartItem = (props) => {
 
-  const {addToCart, removeFromCart, cartItems} = useContext(ShopContext)
+  const { addToCart, removeFromCart, cartItems } = useContext(ShopContext)
 
   function StarElements() {
     let starArr = []
@@ -29,13 +29,13 @@ const CartItem = (props) => {
     <div className='cart-item'>
       <div className="cart-item__productinfo">
         <div className="cart-item__image">
-          <img src={props.image} alt="" width={100}/>
+          <img src={props.image} alt="" width={100} />
         </div>
         <div className="cart-item__info">
           <h2>{props.title}</h2>
           <p><span>Description: </span>{props.description}</p>
           <div className="star-elements">
-            <StarElements/>
+            <StarElements />
           </div>
           <p>({props.rateCount})</p>
         </div>

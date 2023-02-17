@@ -27,7 +27,7 @@ const Navbar = () => {
         </Link>
         <Link to="/cart">
           <div onClick={cartPageSelect} className={selectedPage === "cart" ? "selectedBG" : "noBG"}>
-            <ShoppingCart size={32}/>
+            <ShoppingCart size={32} />
           </div>
         </Link>
       </div>

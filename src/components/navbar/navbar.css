@@ -22,7 +22,8 @@
 }
 
 
-.selectedBG, .noBG {
+.selectedBG,
+.noBG {
     display: flex;
     justify-content: center;
     align-items: center;

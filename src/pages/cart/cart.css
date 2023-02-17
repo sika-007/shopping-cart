@@ -1,4 +1,4 @@
-.cart{
+.cart {
     font-family: var(--font-family);
     position: relative;
 }
@@ -8,7 +8,7 @@
     padding-top: 6rem;
 }
 
-.cart__items.section__padding{
+.cart__items.section__padding {
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -33,7 +33,7 @@
     position: fixed;
     bottom: 0px;
     background: rgb(24, 24, 24);
-    color: white;    
+    color: white;
 }
 
 .cart__total-and-btn button {
@@ -44,7 +44,7 @@
     border: 1.5px solid white;
     cursor: pointer;
 }
-  
+
 
 @media screen and (max-width: 550px) {
     .cart__title {

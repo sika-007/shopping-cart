@@ -5,7 +5,7 @@ import products from '../../productData'
 
 const Shop = () => {
 
-   const productElements = products.map(data => {
+  const productElements = products.map(data => {
     return <Product
       key={data.id}
       data={data}

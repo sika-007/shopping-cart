@@ -82,7 +82,7 @@
 @media screen and (max-width: 1260px) {
     .product {
         width: 220px;
-    } 
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -91,7 +91,7 @@
         line-height: 26px;
     }
 
-    .product__add-to-cart{
+    .product__add-to-cart {
         font-size: 10px;
     }
 }
