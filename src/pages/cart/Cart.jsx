@@ -24,16 +24,35 @@ const Cart = () => {
     } 
   })
 
-console.log(Object.values(cartItems))
+  const cartTotal = () => {
+    const cartPriceArr = []
+    for (let i = 0; i < Object.values(cartItems).length; i++) {
+      for(let j = 0; j < products.length; j++) {
+        if (i === j) {
+          cartPriceArr.push(Object.values(cartItems)[i] * products[i].price)
+        }
+      }
+    }
+
+    //Calculating the total from the array
+    const total = cartPriceArr.reduce((acc, cur) => acc + cur, 0)
+
+    //Limiting the total to 2 decimal places
+    return Number.parseFloat(total).toFixed(2)
+  }
 
   return (
-    <div className="cart section__padding">
+    <div className="cart">
       <div className="cart__title">
-        <h1>Your Cart Items</h1>
+        {!Object.values(cartItems).every(num => num === 0) && <h1>Your Cart Items</h1>}
       </div>
-      <div className="cart__items">
+      <div className="cart__items section__padding">
         {Object.values(cartItems).every(num => num === 0) ? <h3 className='no-cart-items'>&#128161;Why not Add Some Items to Your Cart?&#128522;</h3> : cartElements} 
       </div>
+      {!Object.values(cartItems).every(num => num === 0) &&<div className="cart__total-and-btn slide-in-bottom">
+        <h3>Your Total: ${cartTotal()}</h3>
+        <button>Purchase</button>
+      </div>}
     </div>
   )
 }
