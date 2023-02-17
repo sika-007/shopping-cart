@@ -5,6 +5,10 @@
     scroll-behavior: smooth;
 }
 
+html {
+    padding: 0;
+}
+
 body {
     background-color: #ebedf0;
 }
@@ -15,6 +19,22 @@ body {
 
 .section__margin {
     margin: 6rem 4rem;
+}
+
+.slide-in-bottom {
+    animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-bottom {
+    0% {
+        transform: translateY(60px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 @media screen and (max-width: 650px) {
