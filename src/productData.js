@@ -3,7 +3,7 @@ import axios from "axios"
 
 let products = []
 
-axios.get("https://fakestoreapi.com/products?limit=10")
+axios.get("https://fakestoreapi.com/products?limit=20")
 .then(res => {
     products.push(...res.data)
 }).catch(err => {
