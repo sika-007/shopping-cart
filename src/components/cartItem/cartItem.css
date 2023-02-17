@@ -26,6 +26,7 @@
 
 .cart-item__image img{
     width: 70%;
+    max-height: 350px;
 }
 
 .cart-item__info {
