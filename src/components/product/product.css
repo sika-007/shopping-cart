@@ -50,7 +50,7 @@
     font-size: 18px;
     text-align: left;
     justify-self: flex-end;
-    margin: 0 0 5px 10px
+    margin: 0 0 0px 5px
 }
 
 .product__add-to-cart {
@@ -79,7 +79,6 @@
     left: 10px;
 }
 
-
 @media screen and (max-width: 1260px) {
     .product {
         width: 220px;
@@ -100,8 +99,12 @@
 
 @media screen and (max-width: 520px) {
     .product {
-        width: 145px;
+        width: 300px;
         gap: 5px;
+    }
+
+    .product__price {
+        margin: 0 0 10px 10px
     }
 
     .product__price {

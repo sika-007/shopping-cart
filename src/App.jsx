@@ -14,7 +14,7 @@ export const App = () => {
   const [productData, setProductData] = useState([])
 
   useEffect(() => {
-    axios.get("https://fakestoreapi.com/products?limit=10")
+    axios.get("https://fakestoreapi.com/products?limit=20")
     .then(res => {
         setProductData(res.data)
     }).catch(err => {
