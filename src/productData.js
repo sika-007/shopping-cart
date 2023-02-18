@@ -1,19 +1,20 @@
 import axios from "axios"
 
+const url = "https://fakestoreapi.com/products?limit=20"
 
-async function getProducts() {
-    return new Promise((accept) => {
-        axios.get("https://fakestoreapi.com/products?limit=20")
-            .then(res => {
-                accept([...res.data]);
-            }).catch(err => {
-                console.log(err)
-            })
-    })
+let products
 
+async function getProducts(url) {
+    try {
+        const response = await axios.get(url)
+        products = response.data
+        return response.data
+    } catch (error) {
+        console.error(error);
+    }
 }
 
-const products = await getProducts()
+console.log(await getProducts(url))
 
 export default products
 
