@@ -1,8 +1,25 @@
+.shop {
+    position: relative;
+}
+
 .shop__products {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
     justify-items: center;
+}
+
+.shop__more-info {
+    background: rgba(9, 9, 36, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 3rem;
 }
 
 @media screen and (max-width: 1050px) {
