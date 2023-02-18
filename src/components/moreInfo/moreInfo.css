@@ -1,0 +1,50 @@
+.more-info.section__padding {
+    position: relative;
+    font-family: var(--font-family);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    height: 90%;
+    width: 90%;
+    overflow-y: scroll;
+    padding-top: 3rem;
+}
+
+.more-info__name {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.more-info__description p {
+    margin-bottom: 1rem;
+}
+
+.more-info__rating {
+    margin-bottom: 0.5rem;
+}
+
+.more-info__price-and-add-to-cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.more-info__price-and-add-to-cart button {
+    background: transparent;
+    color: black;
+    font-family: var(--font-family);
+    padding: 0.5rem;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.close-more-info {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
