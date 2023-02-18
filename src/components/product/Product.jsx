@@ -8,7 +8,7 @@ import { ShopContext } from '../../context/context'
 
 const Product = (props) => {
 
-  const { addToCart, cartItems } = useContext(ShopContext)
+  const { addToCart, cartItems, setMoreInfoId } = useContext(ShopContext)
   const cartItemAmount = cartItems[props.id]
 
 
@@ -29,8 +29,10 @@ const Product = (props) => {
   }
 
 
+
+
   return (
-    <div className="product">
+    <div className="product" onClick={() => setMoreInfoId(props.id)}>
       <div className="product__image">
         <img src={props.productImage} alt={props.name} />
       </div>
@@ -38,7 +40,11 @@ const Product = (props) => {
         <p className='product__name'>{props.name}</p>
         <p className="product__price">${props.price}</p>
       </div>
-      <button className="product__add-to-cart" onClick={() => addToCart(props.id)}>
+      <button className="product__add-to-cart" onClick={(event) => {
+        event.stopPropagation()
+        addToCart(props.id)
+      }
+      }>
         Add to Cart {cartItemAmount > 0 && `(${cartItemAmount})`}
       </button>
       <div className='rating'>

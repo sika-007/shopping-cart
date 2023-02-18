@@ -7,6 +7,7 @@ export const ShopContext = createContext();
 export const ShopContextProvider = (props) => {
 
     const [cartItems, setCartItems] = useState({})
+    const [moreInfoId, setMoreInfoId] = useState(null)
 
     useEffect(() => {
         let cart = {}
@@ -16,6 +17,7 @@ export const ShopContextProvider = (props) => {
         setCartItems(cart)
     }, [products.length])
 
+
     const addToCart = (itemId) => {
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }))
     }
@@ -24,7 +26,7 @@ export const ShopContextProvider = (props) => {
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }))
     }
 
-    const contextValue = { cartItems, addToCart, removeFromCart }
+    const contextValue = { cartItems, addToCart, removeFromCart, moreInfoId, setMoreInfoId }
 
     return (
         <ShopContext.Provider value={contextValue}>
