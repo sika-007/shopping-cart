@@ -3,11 +3,9 @@ import axios from "axios"
 
 async function getProducts() {
     return new Promise((accept) => {
-        const productsArr = []
         axios.get("https://fakestoreapi.com/products?limit=20")
             .then(res => {
-                productsArr.push(...res.data)
-                accept(productsArr)
+                accept([...res.data]);
             }).catch(err => {
                 console.log(err)
             })
