@@ -1,13 +1,12 @@
 import React, { useContext } from 'react'
 import "./cart.css"
-import products from '../../productData'
 import { ShopContext } from '../../context/context'
 import CartItem from '../../components/cartItem/CartItem'
 
 
 const Cart = () => {
 
-  const { cartItems } = useContext(ShopContext)
+  const { cartItems, products } = useContext(ShopContext)
 
   const cartElements = products.map((product) => {
     if (cartItems[product.id] > 0) {

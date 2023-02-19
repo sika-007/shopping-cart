@@ -5,7 +5,6 @@ import Shop from "./pages/shop/Shop"
 import Cart from "./pages/cart/Cart"
 import "./App.css"
 import { ShopContextProvider } from "./context/context"
-import products from "./productData"
 
 
 
@@ -17,7 +16,7 @@ export const App = () => {
         <Router>
           <Navbar />
           <Routes>
-            <Route path="/" element={<Shop productData={products}/>}/>
+            <Route path="/" element={<Shop />}/>
             <Route path="/cart" element={<Cart />}/>
           </Routes>
         </Router>

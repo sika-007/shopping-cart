@@ -1,14 +1,13 @@
 import React, { useContext } from 'react'
 import Product from '../../components/product/Product'
 import "./shop.css"
-import products from '../../productData'
 import MoreInfo from '../../components/moreInfo/MoreInfo'
 import { ShopContext } from '../../context/context'
 
 
 const Shop = () => {
 
-  const { moreInfoId, setMoreInfoId } = useContext(ShopContext)
+  const { moreInfoId, setMoreInfoId, products } = useContext(ShopContext)
 
   function showMoreInfo(id) {
     for (const product of products) {
@@ -27,7 +26,7 @@ const Shop = () => {
     }
   }
 
-  const productElements = products.map(product => {
+  const productElements = products?.map(product => {
     return <Product
       key={product.id}
       id={product.id}
