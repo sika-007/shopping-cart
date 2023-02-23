@@ -7,17 +7,15 @@ import "./App.css"
 import { ShopContextProvider } from "./context/context"
 
 
-
 export const App = () => {
-
   return (
     <div className="app">
       <ShopContextProvider>
         <Router>
           <Navbar />
           <Routes>
-            <Route path="/" element={<Shop />}/>
-            <Route path="/cart" element={<Cart />}/>
+            <Route path="/" element={<Shop />} />
+            <Route path="/cart" element={<Cart />} />
           </Routes>
         </Router>
       </ShopContextProvider>
