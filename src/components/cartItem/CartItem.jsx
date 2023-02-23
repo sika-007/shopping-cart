@@ -7,7 +7,7 @@ import { ShopContext } from '../../context/context'
 
 const CartItem = (props) => {
 
-  const { addToCart, removeFromCart, cartItems } = useContext(ShopContext)
+  const { addToCart, removeFromCart, cartItems, updateCartItems } = useContext(ShopContext)
 
   function StarElements() {
     let starArr = []
@@ -41,7 +41,9 @@ const CartItem = (props) => {
       </div>
       <div className="cart-item__product-count">
         <button className='cart-item__btn' onClick={() => addToCart(props.id)}>+</button>
-        <p>{cartItems[props.id]}</p>
+        <input type="text" value={cartItems[props.id]} onChange={(e) => {
+          updateCartItems(e, props.id)
+        }} />
         <button className='cart-item__btn' onClick={() => removeFromCart(props.id)}>-</button>
       </div>
     </div>

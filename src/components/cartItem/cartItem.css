@@ -56,16 +56,26 @@
     gap: 10px
 }
 
+.cart-item__product-count p {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.cart-item__product-count input {
+    background: transparent;
+    outline: none;
+    border: none;
+    width: 30px;
+    height: 40px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
 .cart-item__btn {
     width: 45px;
     height: 45px;
     border-radius: 8px;
     cursor: pointer;
-}
-
-.cart-item__product-count p {
-    font-weight: bold;
-    font-size: 1.5rem;
 }
 
 @media screen and (max-width: 950px) {
