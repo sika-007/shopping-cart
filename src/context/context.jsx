@@ -37,6 +37,9 @@ export const ShopContextProvider = (props) => {
         setCartItems(cart)
     }, [products?.length])
 
+    const updateCartItems = (event, itemId) => {
+        setCartItems(prev => ({...prev, [itemId]: event.target.value}))
+    }
 
     const addToCart = (itemId) => {
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }))
@@ -46,7 +49,7 @@ export const ShopContextProvider = (props) => {
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }))
     }
 
-    const contextValue = { cartItems, addToCart, removeFromCart, moreInfoId, setMoreInfoId, products }
+    const contextValue = { cartItems, addToCart, removeFromCart, moreInfoId, setMoreInfoId, products, updateCartItems }
 
     return (
         <ShopContext.Provider value={contextValue}>
