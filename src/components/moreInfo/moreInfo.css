@@ -5,8 +5,8 @@
     flex-direction: column;
     align-items: center;
     background: white;
-    height: 90%;
-    width: 90%;
+    height: 80%;
+    width: 80%;
     overflow-y: scroll;
     padding-top: 3rem;
 }
@@ -14,6 +14,18 @@
 .more-info__name {
     text-align: center;
     margin-bottom: 2rem;
+}
+
+.more-info__image {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.more-info__image img {
+    max-width: 100%;
 }
 
 .more-info__description p {
