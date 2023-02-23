@@ -8,7 +8,7 @@ const Cart = () => {
 
   const { cartItems, products } = useContext(ShopContext)
 
-  const cartElements = products.map((product) => {
+  const cartElements = products?.map((product) => {
     if (cartItems[product.id] > 0) {
       return <CartItem
         key={product.id}
