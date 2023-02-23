@@ -33,7 +33,6 @@ const CartItem = (props) => {
         </div>
         <div className="cart-item__info">
           <h2>{props.title}</h2>
-          <p><span>Description: </span>{props.description}</p>
           <div className="star-elements">
             <StarElements />
           </div>
